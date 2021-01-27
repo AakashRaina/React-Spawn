@@ -1,0 +1,52 @@
+@import 'fonts.css'
+@import 'tailwind.styles.css'
+
+body
+  font-family: 'Source Sans Pro', 'Lato', sans-serif
+
+img
+  height auto
+  width auto
+  max-width 100px
+  max-height 100px
+  display block
+
+.sidebar
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  text-align center
+  .rotate
+    animation rotation 2s infinite linear
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.content-body
+  display flex
+  flex-direction row
+  align-items center
+  justify-content center
+
+  p
+   display inline-block
+
+.content-footer
+  display flex
+  flex-direction row
+  justify-content center
+  align-items flex-end
+
+  span
+    display inline-flex
+    padding 5px
+    font-weight bold
+    svg
+      margin-top 5px

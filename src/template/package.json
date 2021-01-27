@@ -1,0 +1,74 @@
+{
+  "name": "react-starter-kit",
+  "version": "1.0.0",
+  "description": "React based starter kit for web apps",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:styles": "env NODE_ENV=development postcss ./src/css/tailwind.css -o src/css/tailwind.styles.css",
+    "prod-build:styles": "env NODE_ENV=production postcss ./src/css/tailwind.css -o src/css/tailwind.styles.css",
+    "dev-build": "npm run build:styles && webpack-dev-server --env.mode development --hot --color --progress",
+    "prod-build": "npm run prod-build:styles && rm -rf ./dist && webpack --env.mode production",
+    "serve:prod-build": "http-server ./dist --gzip --port 3000",
+    "storybook": "start-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AakashRaina/React-Starter-Kit.git"
+  },
+  "author": "Aakash Raina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AakashRaina/React-Starter-Kit/issues"
+  },
+  "homepage": "https://github.com/AakashRaina/React-Starter-Kit#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-react-html-attrs": "^3.0.4",
+    "compression-webpack-plugin": "^4.0.0",
+    "css-loader": "^3.6.0",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-cli": "^7.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "style-loader": "^1.2.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "tailwindcss": "^1.4.6",
+    "terser-webpack-plugin": "^3.0.6",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "error-overlay-webpack-plugin": "^0.4.1",
+    "http-server": "^0.12.3",
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpackbar": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
