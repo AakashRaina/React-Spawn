@@ -1,0 +1,24 @@
+{
+  "name": "react-sling-cli",
+  "version": "1.0.0",
+  "description": "cli tool quickly scaffold react apps",
+  "main": "src/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AakashRaina/react-sling-cli.git"
+  },
+  "author": "Aakash Raina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AakashRaina/react-sling-cli/issues"
+  },
+  "homepage": "https://github.com/AakashRaina/react-sling-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "ora": "^5.3.0",
+    "yargs": "^16.2.0"
+  }
+}
