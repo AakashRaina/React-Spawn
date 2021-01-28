@@ -19,9 +19,9 @@
   "author": "Aakash Raina",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AakashRaina/React-Starter-Kit/issues"
+    "url": "https://github.com/AakashRaina/react-sling-cli/issues"
   },
-  "homepage": "https://github.com/AakashRaina/React-Starter-Kit#readme",
+  "homepage": "https://github.com/AakashRaina/react-sling-cli#readme",
   "dependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
