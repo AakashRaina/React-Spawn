@@ -21,7 +21,6 @@
   "homepage": "https://github.com/AakashRaina/react-sling-cli#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "ora": "^5.3.0",
     "yargs": "^16.2.0"
   }
 }

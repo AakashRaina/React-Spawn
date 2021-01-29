@@ -1,35 +1,49 @@
 const fs = require("fs");
 const path = require("path");
 const process = require("process");
-const ora = require("ora");
+const chalk = require("chalk");
 
 const ignoreFilesAndDirs = ["node_modules", "package-lock.json"];
 const src = path.join(__dirname, "../../core");
 
 function initiateProject(name) {
   const dest = `${process.cwd()}/${name}`;
-  const initialCheckLoader = ora("Initiating your project...").start();
+  console.log(chalk.greenBright("Initializing your project...."));
 
-  setTimeout(() => {
-    try {
-      return checkForDirectory(initialCheckLoader, dest, name);
-    } catch (error) {
-      console.error(error);
+  try {
+    if (checkForDirectory(dest, name)) {
+      console.log("Proceed to copy");
+    } else {
       return;
     }
-  }, 1000);
+  } catch (error) {
+    console.error(error);
+    return;
+  }
 }
 
-function checkForDirectory(spinner, dest, name) {
+function checkForDirectory(dest, name) {
   if (!fs.existsSync(dest)) {
     fs.mkdir(dest, (err) => {
-      if (err) spinner.fail("Failed to initiate your project...try again");
-      else
-        spinner.succeed("Initiated successfully. Generating boilerplate....");
+      if (err) {
+        console.log(
+          chalk.redBright("Failed to initiate your project...try again")
+        );
+        return false;
+      } else {
+        console.log(
+          chalk.greenBright(
+            "Initiated successfully. Generating boilerplate...."
+          )
+        );
+        return true;
+      }
     });
   } else {
-    spinner.fail(`${name} already exists. Please choose a different name.`);
-    return;
+    console.log(
+      chalk.redBright(`${name} already exists. Please choose a different name.`)
+    );
+    return false;
   }
 }
 
