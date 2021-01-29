@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const utils = require("./Utils/Utils");
+const initiateBootstrap = require("./Utils/Initiate");
 
 // get name of project from cli
 const appName = process.argv.splice(2)[0];
-utils.initiateProject(appName);
+initiateBootstrap(appName);
