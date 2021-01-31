@@ -7,12 +7,12 @@ class App extends Component {
   render() {
     return (
       <div class="grid grid-flow-row grid-rows-1 grid-cols-12 h-screen">
-        <div class="invisible bg-purple-900 sidebar space-y-6 lg:col-span-2 lg:visible">
+        <div class="invisible bg-yellow-400 sidebar space-y-6 lg:col-span-2 lg:visible">
           <img src={react_svg} class="rotate" />
-          <h4 class="text-white font-bold">React Sling</h4>
-          <p class="text-white font-bold">
-            Custom boilerplate for quickly bootstrapping react apps 🚀. An
-            alternative to create-react-app.
+          <h4 class="font-bold">React Spawn ♔</h4>
+          <p class="font-bold text-gray-900">
+            CLI tool to quickly spawn a minimalist template for SPA react web
+            apps 🚀
           </p>
         </div>
         <div class="col-span-12 lg:col-span-10">
@@ -21,33 +21,36 @@ class App extends Component {
               <ul class="list-disc pl-6">
                 <li>
                   To get started, clone the repo & run{" "}
-                  <p class="text-purple-600">npm run dev:build</p> and edit{" "}
-                  <p class="text-purple-600">App.js</p>
+                  <p class="text-blue-700 font-bold">npm run dev:build</p> and
+                  edit <p class="text-blue-700 font-bold">App.js</p>
                 </li>
                 <li>
-                  Uses <p class="text-purple-600">Webpack</p> as module bundler,
-                  to update configs change{" "}
-                  <p class="text-purple-600">webpack.config.js</p>
+                  Uses <p class="text-blue-700 font-bold">Webpack</p> as module
+                  bundler, to update configs change{" "}
+                  <p class="text-blue-700 font-bold">webpack.config.js</p>
                 </li>
                 <li>
-                  Uses <p class="text-purple-600">Tailwind</p> as CSS framework,
-                  to update configs change{" "}
-                  <p class="text-purple-600">
+                  Uses <p class="text-blue-700 font-bold">Tailwind</p> as CSS
+                  framework, to update configs change{" "}
+                  <p class="text-blue-700 font-bold">
                     tailwind.config.js/postcss.config.js
                   </p>
                 </li>
                 <li>
-                  Icon set from <p class="text-purple-600">react-icons</p>
+                  Icon set from{" "}
+                  <p class="text-blue-700 font-bold">react-icons</p>
                 </li>
                 <li>
-                  Preconfigured for <p class="text-purple-600">Stylus</p>
+                  Preconfigured for{" "}
+                  <p class="text-blue-700 font-bold">Stylus</p>
                 </li>
                 <li>
-                  Supports <p class="text-purple-600">png, svg, jpeg</p>
+                  Supports <p class="text-blue-700 font-bold">png, svg, jpeg</p>
                 </li>
                 <li>
-                  Integrated with <p class="text-purple-600">Storybook</p> for
-                  component development
+                  Integrated with{" "}
+                  <p class="text-blue-700 font-bold">Storybook</p> for component
+                  development
                 </li>
               </ul>
             </div>
@@ -58,16 +61,16 @@ class App extends Component {
                   href="https://github.com/AakashRaina/"
                   ref="noreferrer"
                   target="_blank"
-                  class="text-blue-400 px-1"
+                  class="text-blue-700 px-1"
                 >
                   Aakash Raina
                 </a>
                 . Contribute
                 <a
-                  href="https://github.com/AakashRaina/react-sling-cli"
+                  href="https://github.com/AakashRaina/React-Spawn"
                   target="_blank"
                   ref="noreferrer"
-                  class="text-blue-400 px-1"
+                  class="text-blue-700 px-1"
                 >
                   Github
                 </a>
