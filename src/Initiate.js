@@ -5,7 +5,7 @@ const chalk = require("chalk");
 const generateTemplate = require("./GenerateTemplate");
 const { exec } = require("child_process");
 
-const src = path.join(__dirname, "../../core");
+const src = path.join(__dirname, "../core");
 
 async function initiateBootstrap(name) {
   const dest = `${process.cwd()}/${name}`;
