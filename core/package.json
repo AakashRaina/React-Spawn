@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:styles": "env NODE_ENV=development postcss ./src/css/tailwind.css -o src/css/tailwind.styles.css",
     "prod-build:styles": "env NODE_ENV=production postcss ./src/css/tailwind.css -o src/css/tailwind.styles.css",
-    "dev-build": "npm run build:styles && webpack-dev-server --env.mode development --hot --color --progress",
-    "prod-build": "npm run prod-build:styles && rm -rf ./dist && webpack --env.mode production",
+    "start": "npm run build:styles && webpack-dev-server --env.mode development --hot --color --progress",
+    "build": "npm run prod-build:styles && rm -rf ./dist && webpack --env.mode production",
     "serve:prod-build": "http-server ./dist --gzip --port 3000",
     "storybook": "start-storybook"
   },
