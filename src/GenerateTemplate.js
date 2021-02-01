@@ -1,31 +1,34 @@
 const fs = require("fs");
 const path = require("path");
-const process = require("process");
+const chalk = require("chalk");
 
 const ignoreFilesAndDirs = ["node_modules", "package-lock.json", "dist"];
 
-function copyDirectoryContents(src, dest) {
+function generateTemplate(src, dest) {
   try {
     const files = fs.readdirSync(src, {
       encoding: "utf-8",
       withFileTypes: true,
     });
 
-    files.forEach(async (f) => {
-      if (f.isFile() && !ignoreFilesAndDirs.includes(f.name)) {
-        // open file, read it and write it to the dest folder
-        const data = fs.readFileSync(path.join(src, f.name), "utf8");
-        fs.writeFileSync(path.join(dest, f.name), data, { flag: "w+" });
-      } else if (f.isDirectory() && !ignoreFilesAndDirs.includes(f.name)) {
-        const directoryPath = path.join(dest, f.name);
-        await fs.promises.mkdir(directoryPath);
-        copyDirectoryContents(path.join(src, f.name), directoryPath);
-      }
+    files.forEach((f) => {
+      copyFilecontents(f, src, dest);
     });
-  } catch (error) {}
+  } catch (error) {
+    console.log(chalk.redBright(`Error generating template`));
+  }
   return;
 }
 
-module.exports = {
-  copyDirectoryContents,
-};
+async function copyFilecontents(file, src, dest) {
+  if (file.isFile() && !ignoreFilesAndDirs.includes(file.name)) {
+    const data = fs.readFileSync(path.join(src, file.name), "utf8");
+    fs.writeFileSync(path.join(dest, file.name), data, { flag: "w+" });
+  } else if (file.isDirectory() && !ignoreFilesAndDirs.includes(file.name)) {
+    const directoryPath = path.join(dest, file.name);
+    await fs.promises.mkdir(directoryPath);
+    generateTemplate(path.join(src, file.name), directoryPath);
+  }
+}
+
+module.exports = generateTemplate;
