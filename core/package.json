@@ -1,7 +1,7 @@
 {
-  "name": "react-starter-kit",
+  "name": "react-spawn",
   "version": "1.0.0",
-  "description": "React based starter kit for web apps",
+  "description": "CLI tool to quickly spawn a minimalist template for SPA react web apps",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AakashRaina/React-Starter-Kit.git"
+    "url": "git+https://github.com/AakashRaina/React-Spawn.git"
   },
   "author": "Aakash Raina",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AakashRaina/react-sling-cli/issues"
+    "url": "https://github.com/AakashRaina/React-Spawn/issues"
   },
-  "homepage": "https://github.com/AakashRaina/react-sling-cli#readme",
+  "homepage": "https://github.com/AakashRaina/React-Spawn#readme",
   "dependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",

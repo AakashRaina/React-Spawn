@@ -1,7 +1,7 @@
 {
-  "name": "react-sling-cli",
+  "name": "react-spawn",
   "version": "1.0.0",
-  "description": "cli tool quickly scaffold react apps",
+  "description": "CLI tool to quickly spawn a minimalist template for SPA react web apps ",
   "main": "src/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AakashRaina/react-sling-cli.git"
+    "url": "git+https://github.com/AakashRaina/React-Spawn.git"
   },
   "author": "Aakash Raina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AakashRaina/react-sling-cli/issues"
+    "url": "https://github.com/AakashRaina/React-Spawn/issues"
   },
-  "homepage": "https://github.com/AakashRaina/react-sling-cli#readme",
+  "homepage": "https://github.com/AakashRaina/React-Spawn#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "yargs": "^16.2.0"
