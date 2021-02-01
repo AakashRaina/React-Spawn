@@ -3,18 +3,29 @@ const path = require("path");
 const process = require("process");
 const chalk = require("chalk");
 const generateTemplate = require("./GenerateTemplate");
+const { exec } = require("child_process");
 
 const src = path.join(__dirname, "../../core");
 
 async function initiateBootstrap(name) {
   const dest = `${process.cwd()}/${name}`;
-  console.log(chalk.greenBright("Initializing your project 🚀... Sit back."));
+  console.log(chalk.greenBright("Initializing your React app 🚀... Sit back."));
 
   try {
     const value = await checkForDirectory(dest, name);
     if (value) {
-      console.log("Generating boilerplate 👨🏼‍🍳 ....");
+      console.log(`Creating new React app in ${dest} ....`);
       generateTemplate.copyDirectoryContents(src, dest);
+      console.log("Created successully ✅");
+      console.log("Installing dependecies ....");
+      console.time();
+      exec(`cd ${dest} && npm install`, (error, stdout, stderr) => {
+        if (error) {
+        } else if (stderr) {
+        } else {
+          console.timeEnd(`✨ Done in`);
+        }
+      });
     }
   } catch (error) {
     console.error(error);
