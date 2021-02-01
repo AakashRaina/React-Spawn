@@ -15,7 +15,8 @@ function generateTemplate(src, dest) {
       copyFilecontents(f, src, dest);
     });
   } catch (error) {
-    console.log(chalk.redBright(`Error generating template`));
+    console.log(chalk.bgRed(`Error generating template`));
+    console.log();
   }
   return;
 }

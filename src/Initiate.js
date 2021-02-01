@@ -10,13 +10,15 @@ const src = path.join(__dirname, "../core");
 async function initiateBootstrap(name) {
   const dest = `${process.cwd()}/${name}`;
   console.time(`✨ Done in`);
-  console.log(chalk.greenBright("Initializing your React app 🚀... Sit back."));
+  console.log(chalk.greenBright("Initializing your React app 🚀."));
+  console.log();
 
   const value = await createAppDirectory(dest, name);
   if (value) {
-    console.log(`Creating new React app in ${dest} ....`);
+    console.log(`Spawning new React app at ${chalk.cyanBright(dest)}`);
+    console.log();
     generateTemplate(src, dest);
-    runInstall(dest);
+    runInstall(dest, name);
   }
 }
 
@@ -26,15 +28,17 @@ async function createAppDirectory(dest, name) {
       await fs.promises.mkdir(dest);
       return true;
     } catch (error) {
-      console.log(chalk.redBright("Failed to create your project."));
+      console.log(chalk.bgRed("Failed to create your project."));
+      console.log();
       return false;
     }
   } else {
     console.log(
-      chalk.redBright(
+      chalk.bgRed(
         `Directory name ${name} already exists. Please choose a different name.`
       )
     );
+    console.log();
     return false;
   }
 }
