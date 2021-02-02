@@ -2,7 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
 
-const ignoreFilesAndDirs = ["node_modules", "package-lock.json", "dist"];
+const ignoreFilesAndDirs = [
+  "node_modules",
+  "package-lock.json",
+  "dist",
+  "tailwind.styles.css",
+];
 
 /**
  * Initiates the process of template generation. Calls copyFileContents.

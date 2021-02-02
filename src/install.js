@@ -16,10 +16,10 @@ function showInfo(dir, appName) {
     )} and then you can run several commands:`
   );
   console.log();
-  console.log(` ${chalk.cyan(`npm start`)}`);
+  console.log(` ${chalk.cyan(`npm run start`)}`);
   console.log("  Starts the development server.");
   console.log();
-  console.log(` ${chalk.cyan(`npm build`)}`);
+  console.log(` ${chalk.cyan(`npm run build`)}`);
   console.log("  Bundles the app into static files for production.");
 }
 
