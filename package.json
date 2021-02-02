@@ -1,6 +1,6 @@
 {
-  "name": "react-spawn",
-  "version": "1.0.0",
+  "name": "react-spawn-cli",
+  "version": "1.0.0-beta.0",
   "description": "CLI tool to quickly spawn a minimalist template for SPA react web apps ",
   "main": "src/cli.js",
   "scripts": {
