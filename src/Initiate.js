@@ -7,6 +7,10 @@ const runInstall = require("./install");
 
 const src = path.join(__dirname, "../core");
 
+/**
+ * Initiates CLI & before basic directory check.
+ * @param {string} name - Name of the React web app.
+ */
 async function initiateBootstrap(name) {
   const dest = `${process.cwd()}/${name}`;
   console.time(`✨ Done in`);
@@ -22,6 +26,12 @@ async function initiateBootstrap(name) {
   }
 }
 
+/**
+ * Creates webapp folder if it doesnt exist.
+ * @param {string} dest - destination directory path.
+ * @param {string} name - source directory path.
+ * @returns {boolean} whether directory was created successfully.
+ */
 async function createAppDirectory(dest, name) {
   if (!fs.existsSync(dest)) {
     try {

@@ -3,6 +3,11 @@ const path = require("path");
 const chalk = require("chalk");
 const process = require("process");
 
+/**
+ * Displays final running instructions on the console.
+ * @param {string} dir - directory name.
+ * @param {string} appName - React app name.
+ */
 function showInfo(dir, appName) {
   console.log(`${chalk.green("Success")} 🎉 !! Created ${appName} at ${dir}`);
   console.log(
@@ -18,6 +23,11 @@ function showInfo(dir, appName) {
   console.log("  Bundles the app into static files for production.");
 }
 
+/**
+ * Install packages for newly created React app.
+ * @param {string} dir - directory name where to install packages.
+ * @param {string} appName - React app name.
+ */
 function installDeps(dir, appName) {
   try {
     console.log("Installing packages. This might take a minute.");
