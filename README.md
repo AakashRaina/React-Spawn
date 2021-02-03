@@ -1,6 +1,6 @@
 <h1 align="center">React Spawn ♚</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0-beta.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/AakashRaina/React-Spawn/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
